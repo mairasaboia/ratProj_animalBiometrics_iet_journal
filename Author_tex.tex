@@ -1,0 +1,244 @@
+%% Author_tex.tex
+%% V1.0
+%% 2016/09/02
+%% developed by Techset
+%%
+%% This file describes the coding for cta-author.cls
+
+\documentclass{cta-author}%%%%where cta-author is the template name
+
+\newtheorem{theorem}{Theorem}{}
+\newtheorem{corollary}{Corollary}{}
+\newtheorem{remark}{Remark}{}
+\usepackage{epstopdf}
+
+%The authors can define any packages after the \documentclass{cta-author} command.
+
+%\usepackage{amsmath} for dealing with mathematics,
+%\usepackage{amsthm} for dealing with theorem environments,
+%\usepackage{cite} for dealing with citations
+%\usepackage{hyperref} for linking the cross references
+%\usepackage{graphics} for dealing with figures.
+%\usepackage{algorithmic} for describing algorithms
+%\usepackage{subfig} for getting the subfigures e.g., "Figure 1a and 1b" etc.
+%\usepackage{url} It provides better support for handling and breaking URLs.
+
+%The author can find the documentation of the above style file and any additional
+%supporting files if required from "http://www.ctan.org"
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+
+\begin{document}
+
+\title{Insert the article title here}
+
+\author{\au{S. Cheng$^{1,2}$}%%% First author
+\au{J.C. Ji$^1$}%%% Second author
+\au{J. Zhou$^2$}%%% Third author
+}
+
+\address{\add{1}{....}%%% Author address here
+%%% First group represent author affiliation number and second group represent name.
+\add{2}{....}
+\email{....}}
+
+\begin{abstract}
+The paper should have around 10 pages
+\end{abstract}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Introduction   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\cite{morel2009asift}
+This demo file is intended to serve as a ``starter file''
+for IMAIAI journal papers produced under \LaTeX\ using
+imaiai.cls v1.5e.
+
+\subsection{Insert B head here}
+Subsection text here.
+
+
+\subsubsection{Insert C head here}
+Subsubsection text here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Related work   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Related work}
+
+\subsection{Animal Behavior Analysis}
+We should first describe previous work on animal behavior analysis, discuss the differences between our work with previous work, and at last we can say we focus on animal biometrics and re-identification problems to solve animal behavior analysis problem.
+
+\subsection{Animal Biometrics}
+
+
+In this section we can present an overview of recent works in animal biometrics and compare their scenery / challenges / advantages, and explain whether their solution is applicable or not to our project.
+For example: some animals have color patterns or they are not deformable.
+
+\subsection{Re-identification}
+
+We should describe applications where re-identification is important and which type of information (Shape / feature /  color or any other descriptor) is used.
+
+\subsection{Deep Learning/ Siamese Networks}
+ (Yifang: This is one solution for Re-indentification problem, can we put this part in Re-identification section?)   \cite{zagoruyko2015learning}
+	Describe the Siamese Net in the context of patch matching and person re-identification
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     Dataset     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Dataset}	
+
+\cite{liubiometric}
+
+\section{Equations}
+
+Sample equations.
+
+%%% Numbered equation
+\begin{align}\label{1.1}
+\begin{split}
+\frac{\partial u(t,x)}{\partial t} &= Au(t,x) \left(1-\frac{u(t,x)}{K}\right)-B\frac{u(t-\tau,x) w(t,x)}{1+Eu(t-\tau,x)},\\
+\frac{\partial w(t,x)}{\partial t} &=\delta \frac{\partial^2w(t,x)}{\partial x^2}-Cw(t,x)+D\frac{u(t-\tau,x)w(t,x)}{1+Eu(t-\tau,x)},
+\end{split}
+\end{align}
+
+\begin{align}\label{1.2}
+\begin{split}
+\frac{dU}{dt} &=\alpha U(t)(\gamma -U(t))-\frac{U(t-\tau)W(t)}{1+U(t-\tau)},\\
+\frac{dW}{dt} &=-W(t)+\beta\frac{U(t-\tau)W(t)}{1+U(t-\tau)}.
+\end{split}
+\end{align}
+
+%%%% Unnumbered equation
+\[
+\frac{\partial(F_1,F_2)}{\partial(c,\omega)}_{(c_0,\omega_0)} = \left|
+\begin{array}{ll}
+\frac{\partial F_1}{\partial c} &\frac{\partial F_1}{\partial \omega} \\\noalign{\vskip3pt}
+\frac{\partial F_2}{\partial c}&\frac{\partial F_2}{\partial \omega}
+\end{array}\right|_{(c_0,\omega_0)}
+\]
+
+\section{Enunciations}
+%%%% Most of the enunciations like theorem, lemma, corollary, proposition, defintion,
+%%%% condition, example, conjecture etc. are defined in the class file.
+
+%%%% If the author wants to add or modify the enunciation style
+%%%% they can define in the preamble as shown below.
+
+%%%% \newtheoremstyle{theorem}{6pt}{6pt}{\rm}{}{\sffamily}{ }{ }{}
+%%%% \theoremstyle{theorem}
+%%%% \newtheorem{theorem}{\sc Theorem}[section]
+
+%%%%\newtheoremstyle{corollary}{6pt}{6pt}{\rm}{}{\sffamily}{ }{ }{}
+%%%%\theoremstyle{corollary}
+%%%%\newtheorem{corollary}{\sc Corollary}[section]
+
+%%%%\newtheoremstyle{definition}{6pt}{6pt}{\rm}{}{\sffamily}{ }{ }{}
+%%%%\theoremstyle{definition}
+%%%%\newtheorem{definition}[theorem]{\sc Definition}
+%%%%
+%%%%\newtheorem{exercise}[theorem]{Exercise}
+
+\begin{theorem}\label{T0.1}
+Assume that $\alpha>0, \gamma>1, \beta>\frac{\gamma+1}{\gamma-1}$.
+Then there exists a small $\tau_1>0$, such that for $\tau\in
+[0,\tau_1)$, if $c$ crosses $c(\tau)$ from the direction of
+to  a small amplitude periodic traveling wave solution of
+(2.1), and the period of $(\check{u}^p(s),\check{w}^p(s))$ is
+\[
+\check{T}(c)=c\cdot \left[\frac{2\pi}{\omega(\tau)}+O(c-c(\tau))\right].
+\]
+\end{theorem}
+
+
+\section{Figures \& Tables}
+
+The output for figure is:
+
+\begin{figure}[!h]
+%\centering\includegraphics[width=2.5in]{figurename.eps}
+%%%call your figure name in the place "figurename.eps"
+\caption{Insert figure caption here}
+\label{fig_sim}
+\end{figure}
+
+ An example of a double column floating figure using two subfigures.
+ (The subfig.sty package must be loaded for this to work.)
+ The subfigure \verb+\label+ commands are set within each subfloat command, the
+ \verb+\label+ for the overall figure must come after \verb+\caption+.
+ \verb+\hfil+ must be used as a separator to get equal spacing.
+ The subfigure.sty package works much the same way, except \verb+\subfigure+ is
+ used instead of \verb+\subfloat+.
+
+%\begin{figure*}[!h]
+%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{figurename.eps}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{figurename.eps}%
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+
+\vskip2pc
+
+\noindent The output for table is:
+
+\begin{table}[!h]
+\caption{An Example of a Table}%%%Table caption goes here
+\label{table_example}
+\centering
+\begin{tabular}{|c||c|}%%%The number of columns has to be defined here
+\hline
+One & Two\\ %%%% Table body
+\hline
+Three & Four\\%%%% Table body
+\hline
+\end{tabular}
+\end{table}%%%End of the table
+
+\section{Conclusion}
+The conclusion text goes here.
+
+\section*{Acknowledgment}
+
+Insert the Acknowledgment text here.
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+
+%\bibliographystyle{imaiai}
+%\bibliography{sample}
+%
+% once the .bbl file has been generated then place the text in your article.
+
+% To get the numbered reference style the author should use [numbib]
+%as an option in the document class.  For example: \documentclass[numbib]{imaiai}
+
+\bibliography{bibliography}
+\bibliographystyle{ieeetr}
+
+%\begin{thebibliography}{9}
+%\bibitem{1}
+%Vicsek T., Czir\'{o}k A., Ben-Jacob E., Cohen I.: `Novel type of phase transition in a system %of self-driven particles', \textit{Phys. Rev. Lett.}, 1995, \textbf{75}, pp.~1226--1229
+
+%\bibitem{2}
+%Jadbabaie A., Lin J., Morse A.S.: `Coordination of groups of
+%mobile autonomous agents using nearest neighbor rules', \textit{IEEE
+%Trans. Autom. Control}, 2003, \textbf{48}, pp.~988--1001
+
+%\bibitem{3}
+%Olfati-Saber R., Murray R.M.: `Consensus problems in networks
+%of agents with switching topology and time-delays', \textit{IEEE Trans.
+%Autom. Control}, 2004, \textbf{49}, pp.~1520--1533
+%\end{thebibliography}
+
+\end{document}
